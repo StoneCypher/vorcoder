@@ -41,9 +41,10 @@ Then I'd probably:
 * Add the scatter cells one at a time, at the location specified by the current worst pixel
 * Make the fills a directional gradient instead of a flat color 
   * (lol figuring out what the gradient would be)
-* Not use &lt;canvas&gt;, whose edges don't merge predictably between browsers even with magic
+* Not use `&lt;canvas&gt;`, whose edges don't merge predictably between browsers even with magic
 * Not use js frankly
 * Find an encoding for the color-point-pixel-grads with nifty space characteristics
+* Evolve the point locations after placement because they won't be optimal afterwards and hill climbing can fake it pretty well
 * screw you this question is mean i'm taking my ball and going home
 
 
