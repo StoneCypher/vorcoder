@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+  <head>
+
+    <script type="text/javascript" src="rhill-voronoi-core.js"></script>
+    <script type="text/javascript" src="vorcoder.js"></script>
+    <script type="text/javascript" src="imgTools.js"></script>
+
+    <script type="text/javascript">
+
+      var v;
+
+      function go() {
+
+        v = new VorAnneal({ image : document.getElementById('image'), diff : document.getElementById('diff') });
+
+        var Config = {
+          points : 12000
+        };
+
+        v.Render(
+          document.getElementById('orig'),
+          document.getElementById('tgt'),
+          Config
+        );
+
+        v.iDiff(document.getElementById('orig'), document.getElementById('tgt'), document.getElementById('diff'), document.getElementById('report'));
+
+      }
+
+    </script>
+
+  </head>
+
+  <body onload="go();">
+
+<!--<img id="image" src="cuddy.png"/>              -->
+<!--<img id="image" src="paint_landscape.png"/>    -->
+<!--<img id="image" src="JeffJoelleShoulder.png"/> -->
+    <img id="image" src="JeffJoelleShoulder.png"/>
+
+    <canvas id="orig" style="border:1px solid black;"></canvas>
+    <canvas id="tgt"  style="border:1px solid black;"></canvas>
+    <canvas id="diff" style="border:1px solid black;"></canvas>
+    
+    <br/>
+    Worst cell is <span id="report"></span>
+
+  </body>
+
+</html>
