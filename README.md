@@ -5,6 +5,8 @@ Voronoi image encoder in JS.
 
 This thing is hilariously slow.
 
+[Try it live](http://stonecypher.github.io/vorcoder/vorcoder.html)
+
 
 
 Huh?
